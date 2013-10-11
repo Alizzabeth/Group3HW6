@@ -1,0 +1,16 @@
+import java.text.DecimalFormat;
+class ConvertKiloLiter{
+	public static void main(String[] args){
+		DecimalFormat df=new DecimalFormat ("0.000");
+		final int PERLITER=1000;
+		final double PERKILO=0.001;
+		int count;
+		System.out.println("Litters     Kiloliters  |  Kiloliters     Liters");
+		for(count=1 ; count <= 10 ; count++){
+			if(count == 10)
+				System.out.println(count+ "           " +df.format(count*PERKILO)+ "      |  " +count+ "             " +(count*PERLITER));
+			else
+				System.out.println(count+ "             " +df.format(count*PERKILO)+ "      |  " +count+ "                " +(count*PERLITER));
+		}
+	}
+}
